@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-
 namespace SkyAcademy
 {
     public partial class Form1 : Form
@@ -22,78 +15,52 @@ namespace SkyAcademy
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+        private void Form1_Load(object sender, EventArgs e) { }
 
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            if (textNome.Text == "" || textPassword.Text == "" || textEmail.Text == "")
+            if (string.IsNullOrEmpty(textNome.Text) || string.IsNullOrEmpty(textPassword.Text) || string.IsNullOrEmpty(textEmail.Text))
             {
-                MessageBox.Show("Preencha todos os campos corretamente");
-                textNome.Focus();
+                MessageBox.Show("Preencha todos os campos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-
-
             try
             {
-                // Estabelece a conexão com o banco de dados
-                conexao = new MySqlConnection("Server=127.0.0.1; Port=3306; Database=db_skyacademyt; Pwd='';");
+                conexao = new MySqlConnection(
+                    "Server=localhost; Port=3306; Database=db_skyacademy;  Pwd=;"
+                );
 
-                // SQL de inserção no banco
                 sql = "INSERT INTO CADASTRO (nome, email, senha) VALUES (@NOME, @EMAIL, @SENHA)";
                 comando = new MySqlCommand(sql, conexao);
 
-                // Adiciona os parâmetros para a consulta
                 comando.Parameters.AddWithValue("@NOME", textNome.Text);
                 comando.Parameters.AddWithValue("@EMAIL", textEmail.Text);
                 comando.Parameters.AddWithValue("@SENHA", textPassword.Text);
 
-                // Abre a conexão e executa o comando
                 conexao.Open();
                 comando.ExecuteNonQuery();
 
-                // Exibe uma mensagem de sucesso
-                MessageBox.Show("Seu registro foi um sucesso.");
+                MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Fecha o formulário atual
                 this.Hide();
-
-                // Cria uma nova instância do Form2
-                Form2 form2 = new Form2();
-
-                // Exibe o novo formulário
-                form2.Show();
+                new Form2().Show();
             }
             catch (Exception ex)
             {
-                // Exibe a mensagem de erro, caso ocorra algum problema
-                MessageBox.Show("Erro ao registrar." + ex.Message);
+                MessageBox.Show($"Erro ao registrar: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
-                // Garante que a conexão seja fechada corretamente
                 if (conexao != null && conexao.State == ConnectionState.Open)
-                {
                     conexao.Close();
-                }
 
-                // Limpa as variáveis e campos de texto
-                conexao = null;
-                comando = null;
-                textNome.Text = null;
-                textPassword.Text = null;
-                textEmail.Text = null;
-
-                // Foca no campo de Nome para o próximo cadastro
-                this.textNome.Focus();
+                textNome.Clear();
+                textPassword.Clear();
+                textEmail.Clear();
             }
         }
-
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -127,3 +94,52 @@ namespace SkyAcademy
         }
     }
 }
+
+
+
+/* CONCEDER ACESSO AO CABA
+
+CREATE USER 'kauã bzo$'@'localhost' IDENTIFIED BY '';
+
+--Dar permissão ao banco db_skyacademy
+GRANT ALL PRIVILEGES ON db_skyacademy.* TO 'kauã bzo$'@'localhost';
+
+--Atualizar privilégios
+FLUSH PRIVILEGES;
+
+_________________________________________________
+
+## INFO DO BANCO DE DADOS:
+
+CREATE TABLE Alunos (     id INT PRIMARY KEY AUTO_INCREMENT,     matricula VARCHAR(20) UNIQUE,     nome_completo VARCHAR(100),     data_nascimento DATE,     cpf VARCHAR(14),     endereco VARCHAR(200),     telefone VARCHAR(20),     email VARCHAR(100),     turma VARCHAR(20),     data_matricula DATE,     situacao ENUM('Ativo', 'Transferido', 'Trancado', 'Formado') );
+
+ 
+CREATE TABLE Alunos (
+
+    id INT PRIMARY KEY AUTO_INCREMENT,
+
+    matricula VARCHAR(20) UNIQUE,
+
+    nome_completo VARCHAR(100),
+
+    data_nascimento DATE,
+
+    cpf VARCHAR(14),
+
+    endereco VARCHAR(200),
+
+    telefone VARCHAR(20),
+
+    email VARCHAR(100),
+
+    turma VARCHAR(20),
+
+    data_matricula DATE,
+
+    situacao ENUM('Ativo', 'Transferido', 'Trancado', 'Formado')
+
+);
+
+ 
+
+*/
