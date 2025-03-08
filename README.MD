@@ -6,9 +6,6 @@ A idealização de um projeto de um sistema escolar. Utilizando a linguagem **C#
 ## 🌐 Tecnologias utilizadas:
 
 
-
-git init
-
 <p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/1820px-Logo_C_sharp.svg.png" alt="C#" width="50" style="margin: 5px;" />
   <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/.NET_Logo.svg" alt=".NET" width="50" style="margin: 5px;" />
@@ -20,7 +17,6 @@ git init
 
 ## 🔎  Aprendizados
 
-O que você aprendeu construindo esse projeto? Quais desafios você enfrentou e como você superou-os?
 
 ## 🔗🔭💻Referências externas:
  
