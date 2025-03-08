@@ -42,7 +42,7 @@ namespace SkyAcademy
             try
             {
                 // Estabelece a conexão com o banco de dados
-                conexao = new MySqlConnection("Server=localhost; Port=3306; Database=db_skyacademyt; Pwd='';");
+                conexao = new MySqlConnection("Server=127.0.0.1; Port=3306; Database=db_skyacademyt; Pwd='';");
 
                 // SQL de inserção no banco
                 sql = "INSERT INTO CADASTRO (nome, email, senha) VALUES (@NOME, @EMAIL, @SENHA)";
