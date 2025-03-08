@@ -25,7 +25,7 @@ namespace SkyAcademy
             InitializeComponent();
         }
 
-        private void CarregarEstoque()
+        private void CarregarAlunos()
         {
             try
             {
@@ -34,7 +34,7 @@ namespace SkyAcademy
                 conexao.Open();
 
                 // Consulta para trazer os dados do estoque
-                sql = "SELECT ProdutoID, Nome, Descricao, Quantidade, Preco FROM produtos";
+                sql = "SELECT matricula, nome_completo, data_nascimento, cpf, endereco, telefone, email, turma, data_matricula FROM alunos";
                 comando = new MySqlCommand(sql, conexao);
 
                 // Preencher o DataGridView
@@ -47,7 +47,7 @@ namespace SkyAcademy
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao carregar o estoque: " + ex.Message);
+                MessageBox.Show("Erro ao carregar o painel dos alunos: " + ex.Message);
             }
             finally
             {
@@ -62,7 +62,7 @@ namespace SkyAcademy
         private void button1_Click(object sender, EventArgs e)
         {
             // Chama o método para carregar o estoque
-            CarregarEstoque();
+            CarregarAlunos();
         }
 
         private void button2_Click(object sender, EventArgs e)

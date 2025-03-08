@@ -213,8 +213,7 @@ namespace SkyAcademy
             textEmail.Clear();
             textTurma.Clear();
         }
-
-        private void label7_Click(object sender, EventArgs e)
+private void label7_Click(object sender, EventArgs e)
         {
 
         }
@@ -223,5 +222,6 @@ namespace SkyAcademy
         {
 
         }
+
     }
 }

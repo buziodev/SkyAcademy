@@ -47,7 +47,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 122);
+            this.label1.Location = new System.Drawing.Point(78, 167);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 17);
             this.label1.TabIndex = 1;
@@ -56,17 +56,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 177);
+            this.label2.Location = new System.Drawing.Point(75, 210);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Data de Nascimento:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(43, 232);
+            this.label3.Location = new System.Drawing.Point(78, 265);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 17);
             this.label3.TabIndex = 3;
@@ -75,7 +74,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(43, 287);
+            this.label4.Location = new System.Drawing.Point(78, 310);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 17);
             this.label4.TabIndex = 4;
@@ -84,7 +83,7 @@
             // textNome
             // 
             this.textNome.BackColor = System.Drawing.Color.AliceBlue;
-            this.textNome.Location = new System.Drawing.Point(45, 142);
+            this.textNome.Location = new System.Drawing.Point(82, 180);
             this.textNome.Name = "textNome";
             this.textNome.Size = new System.Drawing.Size(250, 32);
             this.textNome.TabIndex = 5;
@@ -92,14 +91,14 @@
             // dateNascimento
             // 
             this.dateNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateNascimento.Location = new System.Drawing.Point(45, 197);
+            this.dateNascimento.Location = new System.Drawing.Point(79, 234);
             this.dateNascimento.Name = "dateNascimento";
             this.dateNascimento.Size = new System.Drawing.Size(150, 32);
             this.dateNascimento.TabIndex = 6;
             // 
             // textCPF
             // 
-            this.textCPF.Location = new System.Drawing.Point(45, 252);
+            this.textCPF.Location = new System.Drawing.Point(82, 279);
             this.textCPF.Mask = "000.000.000-00";
             this.textCPF.Name = "textCPF";
             this.textCPF.Size = new System.Drawing.Size(150, 32);
@@ -108,7 +107,7 @@
             // textEndereco
             // 
             this.textEndereco.BackColor = System.Drawing.Color.AliceBlue;
-            this.textEndereco.Location = new System.Drawing.Point(45, 307);
+            this.textEndereco.Location = new System.Drawing.Point(82, 332);
             this.textEndereco.Name = "textEndereco";
             this.textEndereco.Size = new System.Drawing.Size(250, 32);
             this.textEndereco.TabIndex = 8;
@@ -116,37 +115,40 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.AliceBlue;
-            this.button1.Location = new System.Drawing.Point(408, 85);
+            this.button1.Location = new System.Drawing.Point(395, 437);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 45);
             this.button1.TabIndex = 15;
             this.button1.Text = "CADASTRAR";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.AliceBlue;
-            this.button2.Location = new System.Drawing.Point(512, 85);
+            this.button2.Location = new System.Drawing.Point(499, 437);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(96, 45);
             this.button2.TabIndex = 16;
             this.button2.Text = "ATUALIZAR";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.AliceBlue;
-            this.button3.Location = new System.Drawing.Point(408, 135);
+            this.button3.Location = new System.Drawing.Point(395, 487);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(200, 37);
             this.button3.TabIndex = 17;
             this.button3.Text = "EXCLUIR";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textMatricula
             // 
             this.textMatricula.BackColor = System.Drawing.Color.AliceBlue;
-            this.textMatricula.Location = new System.Drawing.Point(471, 45);
+            this.textMatricula.Location = new System.Drawing.Point(458, 397);
             this.textMatricula.Name = "textMatricula";
             this.textMatricula.Size = new System.Drawing.Size(100, 32);
             this.textMatricula.TabIndex = 18;
@@ -154,7 +156,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(468, 25);
+            this.label5.Location = new System.Drawing.Point(455, 377);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 17);
             this.label5.TabIndex = 19;
@@ -182,16 +184,16 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::SkyAcademy.Properties.Resources.AzulSemFundo;
-            this.pictureBox2.Location = new System.Drawing.Point(87, -21);
+            this.pictureBox2.Location = new System.Drawing.Point(72, -73);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(174, 160);
+            this.pictureBox2.Size = new System.Drawing.Size(274, 236);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
             // 
             // textTelefone
             // 
-            this.textTelefone.Location = new System.Drawing.Point(46, 362);
+            this.textTelefone.Location = new System.Drawing.Point(82, 384);
             this.textTelefone.Mask = "(00) 00000-0000";
             this.textTelefone.Name = "textTelefone";
             this.textTelefone.Size = new System.Drawing.Size(150, 32);
@@ -200,7 +202,7 @@
             // textEmail
             // 
             this.textEmail.BackColor = System.Drawing.Color.AliceBlue;
-            this.textEmail.Location = new System.Drawing.Point(46, 420);
+            this.textEmail.Location = new System.Drawing.Point(82, 429);
             this.textEmail.Name = "textEmail";
             this.textEmail.Size = new System.Drawing.Size(250, 32);
             this.textEmail.TabIndex = 11;
@@ -208,7 +210,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(42, 342);
+            this.label6.Location = new System.Drawing.Point(78, 364);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 17);
             this.label6.TabIndex = 10;
@@ -217,7 +219,7 @@
             // textTurma
             // 
             this.textTurma.BackColor = System.Drawing.Color.AliceBlue;
-            this.textTurma.Location = new System.Drawing.Point(46, 494);
+            this.textTurma.Location = new System.Drawing.Point(82, 474);
             this.textTurma.Name = "textTurma";
             this.textTurma.Size = new System.Drawing.Size(100, 32);
             this.textTurma.TabIndex = 13;
@@ -225,17 +227,16 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(43, 397);
+            this.label7.Location = new System.Drawing.Point(78, 409);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 17);
             this.label7.TabIndex = 12;
             this.label7.Text = "E-mail:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(43, 465);
+            this.label8.Location = new System.Drawing.Point(78, 454);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 17);
             this.label8.TabIndex = 14;
@@ -246,6 +247,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 588);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label5);
@@ -266,7 +268,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Font = new System.Drawing.Font("Nirmala Text", 9.75F, System.Drawing.FontStyle.Bold);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

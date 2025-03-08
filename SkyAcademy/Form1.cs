@@ -132,7 +132,7 @@ CREATE TABLE Alunos (
 
     email VARCHAR(100),
 
-    turma VARCHAR(20),
+    turma ENUM('Manhã', 'Tarde', 'Noite's),
 
     data_matricula DATE,
 
