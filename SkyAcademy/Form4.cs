@@ -76,5 +76,17 @@ namespace SkyAcademy
             
             form2.Show();
         }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Form2().Show();
+        }
+
+        private void VoltarAlunos_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Form3().Show();
+        }
     }
 }

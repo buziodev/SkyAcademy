@@ -223,5 +223,15 @@ private void label7_Click(object sender, EventArgs e)
 
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            new Form2().Show();
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

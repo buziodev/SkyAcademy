@@ -40,6 +40,7 @@ bld/
 
 # Visual Studio 2017 auto generated files
 Generated\ Files/
+*READMEALEX.MD
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
@@ -78,6 +79,7 @@ StyleCopReport.xml
 *.obj
 *.iobj
 *.pch
+*.pdf
 *.pdb
 *.ipdb
 *.pgc
