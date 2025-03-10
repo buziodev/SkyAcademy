@@ -47,6 +47,13 @@ O **Sky Academy** é um sistema desktop desenvolvido em C# (.NET Windows Forms) 
 ```sql
 CREATE DATABASE db_skyacademy;
 
+CREATE TABLE cadastro(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    email VARCHAR(60) UNIQUE,
+    nome VARCHAR(80),
+    senha VARCHAR(50),
+);
+
 CREATE TABLE Alunos (
     id INT PRIMARY KEY AUTO_INCREMENT,
     matricula VARCHAR(20) UNIQUE NOT NULL,
@@ -56,7 +63,13 @@ CREATE TABLE Alunos (
     endereco VARCHAR(200) NOT NULL,
     telefone VARCHAR(20) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    turma ENUM('Manhã', 'Tarde', 'Noite') NOT NULL,
+    turma VARCHAR(10) NOT NULL,
     data_matricula DATE DEFAULT CURRENT_DATE,
     situacao ENUM('Ativo', 'Transferido', 'Trancado', 'Formado') DEFAULT 'Ativo'
 );
+
+```
+
+---
+
+## 🌐 Fluxograma
