@@ -70,6 +70,7 @@ CREATE TABLE Alunos (
 
 ```
 
----
 
 ## 🌐 Fluxograma
+
+![FluxogramaSky](https://github.com/buziodev/SkyAcademy/blob/5f403b9b7bd9e38ab168d57f4a162998a45a613d/FluxogramaSky.png?raw=true)
