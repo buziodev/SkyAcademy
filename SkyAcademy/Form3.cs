@@ -198,7 +198,7 @@ namespace SkyAcademy
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new Form2().Show();
+            new Form4().Show();
         }
 
         // LIMPAR CAMPOS

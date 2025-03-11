@@ -96,17 +96,6 @@ namespace SkyAcademy
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            // Fecha o formulário atual
-            this.Hide();
-
-            // Cria uma nova instância do Form2
-            Form4 form4 = new Form4();
-
-            // Exibe o novo formulário
-            form4.Show();
-        }
 
         private void VoltarBtn(object sender, EventArgs e)
         {

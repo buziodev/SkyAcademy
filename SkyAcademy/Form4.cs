@@ -64,19 +64,6 @@ namespace SkyAcademy
             // Chama o método para carregar o estoque
             CarregarAlunos();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
-            this.Hide();
-
-            
-            Form2 form2 = new Form2();
-
-            
-            form2.Show();
-        }
-
         private void Logout_Click(object sender, EventArgs e)
         {
             this.Hide();
